@@ -1,0 +1,65 @@
+@import "./variables.scss";
+
+@mixin flex-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-sb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@font-face {
+  font-family: praise;
+  src: url("../font/Praise-Regular.ttf");
+}
+@font-face {
+  font-family: poppins;
+  src: url("../font/Poppins-Regular.ttf");
+}
+
+body {
+  background: $bgcolor;
+  color: $color;
+  font-family: poppins, Roboto;
+  .container {
+    height: 200vh;
+    width: 100%;
+    
+  }
+}
+.nav {
+  @include flex-sb;
+  position:sticky;
+  top:1vw;
+  width:86vw;
+  margin:0 7vw;
+  .logo {
+    a {
+      text-decoration: none;
+      font-family: praise;
+      font-size: calc(1vw + 60px);
+      color: $color;
+      text-shadow: 3px 0 $red;
+    }
+  }
+  .links {
+    display: flex;
+    li {
+      list-style: none;
+      margin: 0 0 0 1.2rem;
+    }
+    li a {
+      text-decoration: none;
+      color: $color;
+      font-size: 16px;
+      font-weight: bold;
+      position: relative;
+      &:hover {
+        color: #555;
+      }
+    }
+  }
+}
