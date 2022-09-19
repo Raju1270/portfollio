@@ -22,10 +22,16 @@ function App() {
             </a>
           </div>
           <div>
-            <span className="menu md:hidden space-y-2">
-              <span class="block w-5 h-0.5 bg-gray-200"></span>
-              <span class="block w-8 h-0.5 bg-gray-200"></span>
-            </span>
+            <div className="menu md:hidden relative">
+              <input
+                className="absolute opacity-0 w-8 h-8 top-[-14px]"
+                type="checkbox"
+              />
+              <div className="ham ">
+                <span class="block w-5 h-0.5 my-2 bg-gray-200"></span>
+                <span class="block w-8 h-0.5 my-2 bg-gray-200"></span>
+              </div>
+            </div>
             <ul className="links hidden md:flex  space-x-4">
               <li>
                 <a href="/work">Work</a>

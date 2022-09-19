@@ -30,11 +30,9 @@ body {
   z-index: 2;
   display: flex;
   justify-content: space-between;
-  align-items:center;
+  align-items: center;
 
   .logo {
-    
-
     a {
       text-decoration: none;
       font-family: praise, sans-serif;
@@ -42,13 +40,28 @@ body {
       text-shadow: 3px 0 $primary;
     }
   }
-  .menu{
-    
+  .menu {
+    span {
+      transition: 0.2s linear;
+      border-radius:5px;
+    }
+
+    input:checked + .ham {
+      span:nth-of-type(1) {
+        width: 2rem;
+        transform: rotate(405deg);
+        margin: -0.125rem 0;
+      }
+      span:nth-of-type(2) {
+        transform: rotate(-45deg);
+        margin: -0.125rem 0;;
+      }
+    }
   }
   .links {
     font-family: "Manrope", sans-serif;
     text-transform: uppercase;
-    
+
     li {
       list-style: none;
     }
