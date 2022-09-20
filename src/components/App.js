@@ -4,23 +4,27 @@ import Hero from "./Hero";
 import MenuPage from "./MenuPage";
 function App() {
   const [Menu, setMenu] = useState(false);
-  // const cursorRounded = document.querySelector(".cursor-outer");
-  // const cursorPointed = document.querySelector(".cursor");
-  // const moveCursor = (e) => {
-  //   const mouseY = e.clientY;
-  //   const mouseX = e.clientX;
-  //   cursorRounded.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
-  //   cursorPointed.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
-  // };
-  // window.addEventListener("mousemove", moveCursor);
+  const cursorRounded = document.querySelector(".cursor-outer");
+  const cursorPointed = document.querySelector(".cursor");
+  const moveCursor = (e) => {
+    const mouseY = e.clientY;
+    const mouseX = e.clientX;
+    cursorRounded.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+    cursorPointed.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+  };
+  window.addEventListener("mousemove", moveCursor);
 
-function menuTransition(){
-  setMenu(!Menu);
 
-}
+  
+  function menuTransition() {
+    setMenu(!Menu);
+  }
 
   return (
     <>
+     
+    <div class="cursor-outer absolute top-[0%] left-[0%] w-4 h-4 opacity-[0.4]">
+      </div><div class="cursor absolute top-[0%] left-[0%] w-2 h-2"></div>
       <div className=" w-full h-[100vh] relative">
         <nav className="nav w-full md:px-[7vw] px-[5vw] md:pt-2">
           <div className="logo">
@@ -49,6 +53,7 @@ function menuTransition(){
               </li>
             </ul>
           </div>
+         
         </nav>
         {Menu ? <MenuPage /> : <Hero />}
       </div>

@@ -1,13 +1,16 @@
 import React from "react";
 import "../sass/Hero.scss";
-import img from "../assets/download.png";
+import Illu from "./Illu";
+// import img from "../assets/download.png";
 function Hero() {
   return (
     <>
-      <div className="hero-flex px-[7vw] flex justify-between md:flex-row flex-col-reverse md:mt-[9vw] mt-[14vh] w-full ">
+     <span className="scroll">Keep scrolling v</span>
+     <span  className="spinner"></span>
+      <div className="hero-flex  md:px-[12vw] flex gap-[5rem] md:gap-0 justify-center items-center md:justify-between md:flex-row flex-col-reverse md:mt-[9vw] mt-[14vh] w-full ">
         {/* <div className="shadow"></div>
         <div className="shadow"></div> */}
-        <div className="left">
+        <div className="left ">
           <div className="h1">
             Design <span>&</span> <br />
             Functionality
@@ -29,10 +32,10 @@ function Hero() {
             <br />
             I’m Fullstack Web Developer.
           </div>
-          <div className="button">explore</div>
+          <div className="button w-fit mt-8 px-[4.4rem] py-[1.3rem] text-xl">work</div>
         </div>
         <div className="right  h-[80vw] md:h-[30vw] w-[80vw] md:w-[30vw] flex">
-          <img src={img} className="illu" />
+          <Illu className="illu" />
         </div>
       </div>
       <div className="h-[300vh]"></div>
