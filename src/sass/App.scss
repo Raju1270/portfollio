@@ -12,18 +12,6 @@
   font-family: poppins;
   src: url("../font/Poppins-Regular.ttf");
 }
-.cursor {
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: $primary;
-}
-.cursor-outer {
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: $primary;
-  transition: linear 0.2s;
-}
-
 body {
   background: $bgcolor;
   color: $color;

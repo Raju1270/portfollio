@@ -1,12 +1,15 @@
 import React from "react";
 import "../sass/Hero.scss";
 import Illu from "./Illu";
+import Aboutme from "./Aboutme";
 // import img from "../assets/download.png";
 function Hero() {
   return (
     <>
-     <span className="scroll">Keep scrolling v</span>
-     <span  className="spinner"></span>
+      {/* <span className="scroll hidden md:flex">
+        Scroll<div></div>
+      </span>
+      <span className="spinner"></span> */}
       <div className="hero-flex  md:px-[12vw] flex gap-[5rem] md:gap-0 justify-center items-center md:justify-between md:flex-row flex-col-reverse md:mt-[9vw] mt-[14vh] w-full ">
         {/* <div className="shadow"></div>
         <div className="shadow"></div> */}
@@ -32,12 +35,15 @@ function Hero() {
             <br />
             I’m Fullstack Web Developer.
           </div>
-          <div className="button w-fit mt-8 px-[4.4rem] py-[1.3rem] text-xl">work</div>
+          <div className="button w-fit mt-8 px-[4.4rem] py-[1.3rem] text-xl">
+            work
+          </div>
         </div>
         <div className="right  h-[80vw] md:h-[30vw] w-[80vw] md:w-[30vw] flex">
           <Illu className="illu" />
         </div>
       </div>
+      <Aboutme/>
       <div className="h-[300vh]"></div>
     </>
   );
